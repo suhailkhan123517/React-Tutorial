@@ -1,0 +1,42 @@
+img {
+  width: 300px;
+  height: 200px;
+}
+
+/* .ctv {
+  display: flex;
+  gap: 1rem;
+} */
+
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 10px;
+}
+
+.container {
+  width: 15em;
+  margin: 0 0.2em;
+  float: left;
+  position: relative;
+}
+
+.pic img {
+  width: 100%;
+}
+
+.title {
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.channel,
+.views {
+  font-size: small;
+  margin-bottom: 0.2em;
+}
+
+.views span {
+  padding: 0 0.5em;
+}
