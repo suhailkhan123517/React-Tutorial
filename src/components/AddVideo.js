@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import useVideoDispatch from "../hooks/VdieosDH";
 
 const initailState = {
   time: "5 years",
@@ -9,15 +10,20 @@ const initailState = {
     "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png",
 };
 
-export default function AddVideo({ addVideos, updateVideo, editableVideo }) {
+export default function AddVideo({
+  //  dispatch,
+  editableVideo,
+}) {
+  const dispatch = useVideoDispatch();
   const [video, setVideo] = useState(initailState);
 
   const handlSubmit = (e) => {
     e.preventDefault();
     if (editableVideo) {
-      updateVideo(video);
+      // updateVideo(video);
+      dispatch({ type: "UPDATE", payload: video });
     } else {
-      addVideos(video);
+      dispatch({ type: "ADD", payload: video });
     }
     setVideo(initailState);
   };

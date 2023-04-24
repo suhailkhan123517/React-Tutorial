@@ -40,3 +40,16 @@ img {
 .views span {
   padding: 0 0.5em;
 }
+
+.title.dark {
+  color: white;
+}
+
+.title.light {
+  color: black;
+}
+
+.channel.dark,
+.views.dark {
+  color: white;
+}
